@@ -49,7 +49,7 @@ There is one system parameter to configure:
 	<name>SystemParam</name>
 	<action>upsert</action>
 	<data>
-		<sys_code>SF_CREDENTIALS</sys_code>
+		<sys_code>SALESFORCE_CREDENTIALS</sys_code>
 		<sys_value><![CDATA[{
 	"client_id": "_your_client_id_",
 	"client_secret": "_your_client_secret_",
@@ -57,12 +57,7 @@ There is one system parameter to configure:
 	"password": "_your_password_"
 }]]></sys_value>
 		<sys_type>PRV</sys_type>
-		<sys_desc><![CDATA[**SalesForce** credentials:
-
-- Client ID
-- Client secret
-- Username
-- Password]]></sys_desc>
+		<sys_desc><![CDATA[**SalesForce** credentials]]></sys_desc>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 </object>
@@ -205,7 +200,7 @@ There is one system parameter to configure:
 **Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
-    "credentials": "SF_CREDENTIALS",
+    "credentials": "SALESFORCE_CREDENTIALS",
     "name": "Account"
 }]]></obo_searchspec>
 		<obo_delspec/>
@@ -270,7 +265,7 @@ There is one system parameter to configure:
 **Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
-    "credentials": "SF_CREDENTIALS",
+    "credentials": "SALESFORCE_CREDENTIALS",
     "name": "Case"
 }]]></obo_searchspec>
 		<obo_delspec/>
@@ -335,7 +330,7 @@ There is one system parameter to configure:
 **Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
-    "credentials": "SF_CREDENTIALS",
+    "credentials": "SALESFORCE_CREDENTIALS",
     "name": "Contact"
 }]]></obo_searchspec>
 		<obo_delspec/>
