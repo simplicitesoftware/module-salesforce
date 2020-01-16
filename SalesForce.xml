@@ -167,7 +167,9 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[SalesForce _Account_ object.
+
+**Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
     "credentials": "SF_CREDENTIALS",
@@ -230,7 +232,9 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[SalesForce _Case_ object.
+
+**Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
     "credentials": "SF_CREDENTIALS",
@@ -293,7 +297,9 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>0</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[SalesForce _Contact_ object.
+
+**Note**: the objet fields are retreived from SalesForce metadata at runtime]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[{
     "credentials": "SF_CREDENTIALS",

@@ -16,7 +16,9 @@
 `SFAccount` business object definition
 --------------------------------------
 
+SalesForce _Account_ object.
 
+**Note**: the objet fields are retreived from SalesForce metadata at runtime
 
 ### Fields
 
@@ -30,7 +32,9 @@ No custom action
 `SFCase` business object definition
 -----------------------------------
 
+SalesForce _Case_ object.
 
+**Note**: the objet fields are retreived from SalesForce metadata at runtime
 
 ### Fields
 
@@ -44,7 +48,9 @@ No custom action
 `SFContact` business object definition
 --------------------------------------
 
+SalesForce _Contact_ object.
 
+**Note**: the objet fields are retreived from SalesForce metadata at runtime
 
 ### Fields
 
