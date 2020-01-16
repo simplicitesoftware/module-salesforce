@@ -411,6 +411,247 @@ paths:
         description: Documentation?
         type: boolean
         required: false
+      - in: query
+        name: Name
+        description: Search filter for Account Name
+        type: string
+        required: false
+      - in: query
+        name: Type
+        description: Search filter for Account Type
+        type: string
+        required: false
+        enum:
+        - Prospect
+        - Customer - Direct
+        - Customer - Channel
+        - Channel Partner / Reseller
+        - Installation Partner
+        - Technology Partner
+        - Other
+      - in: query
+        name: ParentId
+        description: Search filter for Parent Account ID
+        type: string
+        required: false
+      - in: query
+        name: BillingStreet
+        description: Search filter for Billing Street
+        type: string
+        required: false
+      - in: query
+        name: BillingCity
+        description: Search filter for Billing City
+        type: string
+        required: false
+      - in: query
+        name: BillingState
+        description: Search filter for Billing State/Province
+        type: string
+        required: false
+      - in: query
+        name: BillingPostalCode
+        description: Search filter for Billing Zip/Postal Code
+        type: string
+        required: false
+      - in: query
+        name: BillingCountry
+        description: Search filter for Billing Country
+        type: string
+        required: false
+      - in: query
+        name: ShippingStreet
+        description: Search filter for Shipping Street
+        type: string
+        required: false
+      - in: query
+        name: ShippingCity
+        description: Search filter for Shipping City
+        type: string
+        required: false
+      - in: query
+        name: ShippingState
+        description: Search filter for Shipping State/Province
+        type: string
+        required: false
+      - in: query
+        name: ShippingPostalCode
+        description: Search filter for Shipping Zip/Postal Code
+        type: string
+        required: false
+      - in: query
+        name: ShippingCountry
+        description: Search filter for Shipping Country
+        type: string
+        required: false
+      - in: query
+        name: Phone
+        description: Search filter for Account Phone
+        type: string
+        required: false
+      - in: query
+        name: Fax
+        description: Search filter for Account Fax
+        type: string
+        required: false
+      - in: query
+        name: AccountNumber
+        description: Search filter for Account Number
+        type: string
+        required: false
+      - in: query
+        name: Website
+        description: Search filter for Website
+        type: string
+        required: false
+      - in: query
+        name: Sic
+        description: Search filter for SIC Code
+        type: string
+        required: false
+      - in: query
+        name: Industry
+        description: Search filter for Industry
+        type: string
+        required: false
+        enum:
+        - Agriculture
+        - Apparel
+        - Banking
+        - Biotechnology
+        - Chemicals
+        - Communications
+        - Construction
+        - Consulting
+        - Education
+        - Electronics
+        - Energy
+        - Engineering
+        - Entertainment
+        - Environmental
+        - Finance
+        - Food & Beverage
+        - Government
+        - Healthcare
+        - Hospitality
+        - Insurance
+        - Machinery
+        - Manufacturing
+        - Media
+        - Not For Profit
+        - Recreation
+        - Retail
+        - Shipping
+        - Technology
+        - Telecommunications
+        - Transportation
+        - Utilities
+        - Other
+      - in: query
+        name: AnnualRevenue
+        description: Search filter for Annual Revenue
+        type: number
+        required: false
+      - in: query
+        name: NumberOfEmployees
+        description: Search filter for Employees
+        type: integer
+        required: false
+      - in: query
+        name: Ownership
+        description: Search filter for Ownership
+        type: string
+        required: false
+        enum:
+        - Public
+        - Private
+        - Subsidiary
+        - Other
+      - in: query
+        name: TickerSymbol
+        description: Search filter for Ticker Symbol
+        type: string
+        required: false
+      - in: query
+        name: Description
+        description: Search filter for Account Description
+        type: string
+        required: false
+      - in: query
+        name: Rating
+        description: Search filter for Account Rating
+        type: string
+        required: false
+        enum:
+        - Hot
+        - Warm
+        - Cold
+      - in: query
+        name: Site
+        description: Search filter for Account Site
+        type: string
+        required: false
+      - in: query
+        name: LastActivityDate
+        description: Search filter for Last Activity
+        type: string
+        required: false
+      - in: query
+        name: simplicite__CustomerPriority__c
+        description: Search filter for Customer Priority
+        type: string
+        required: false
+        enum:
+        - High
+        - Low
+        - Medium
+      - in: query
+        name: simplicite__SLA__c
+        description: Search filter for SLA
+        type: string
+        required: false
+        enum:
+        - Gold
+        - Silver
+        - Platinum
+        - Bronze
+      - in: query
+        name: simplicite__Active__c
+        description: Search filter for Active
+        type: string
+        required: false
+        enum:
+        - 'No'
+        - 'Yes'
+      - in: query
+        name: simplicite__NumberofLocations__c
+        description: Search filter for Number of Locations
+        type: number
+        required: false
+      - in: query
+        name: simplicite__UpsellOpportunity__c
+        description: Search filter for Upsell Opportunity
+        type: string
+        required: false
+        enum:
+        - Maybe
+        - 'No'
+        - 'Yes'
+      - in: query
+        name: simplicite__SLASerialNumber__c
+        description: Search filter for SLA Serial Number
+        type: string
+        required: false
+      - in: query
+        name: simplicite__SLAExpirationDate__c
+        description: Search filter for SLA Expiration Date
+        type: string
+        required: false
+      - in: query
+        name: simplicite__Test__c
+        description: Search filter for Test
+        type: boolean
+        required: false
       tags:
       - SFAccount
   /rest/SFContact:
@@ -450,6 +691,202 @@ paths:
         name: _doc
         description: Documentation?
         type: boolean
+        required: false
+      - in: query
+        name: AccountId
+        description: Search filter for Account ID
+        type: string
+        required: false
+      - in: query
+        name: LastName
+        description: Search filter for Last Name
+        type: string
+        required: false
+      - in: query
+        name: FirstName
+        description: Search filter for First Name
+        type: string
+        required: false
+      - in: query
+        name: Salutation
+        description: Search filter for Salutation
+        type: string
+        required: false
+        enum:
+        - Mr.
+        - Ms.
+        - Mrs.
+        - Dr.
+        - Prof.
+      - in: query
+        name: Name
+        description: Search filter for Full Name
+        type: string
+        required: false
+      - in: query
+        name: OtherStreet
+        description: Search filter for Other Street
+        type: string
+        required: false
+      - in: query
+        name: OtherCity
+        description: Search filter for Other City
+        type: string
+        required: false
+      - in: query
+        name: OtherState
+        description: Search filter for Other State/Province
+        type: string
+        required: false
+      - in: query
+        name: OtherPostalCode
+        description: Search filter for Other Zip/Postal Code
+        type: string
+        required: false
+      - in: query
+        name: OtherCountry
+        description: Search filter for Other Country
+        type: string
+        required: false
+      - in: query
+        name: MailingStreet
+        description: Search filter for Mailing Street
+        type: string
+        required: false
+      - in: query
+        name: MailingCity
+        description: Search filter for Mailing City
+        type: string
+        required: false
+      - in: query
+        name: MailingState
+        description: Search filter for Mailing State/Province
+        type: string
+        required: false
+      - in: query
+        name: MailingPostalCode
+        description: Search filter for Mailing Zip/Postal Code
+        type: string
+        required: false
+      - in: query
+        name: MailingCountry
+        description: Search filter for Mailing Country
+        type: string
+        required: false
+      - in: query
+        name: Phone
+        description: Search filter for Business Phone
+        type: string
+        required: false
+      - in: query
+        name: Fax
+        description: Search filter for Business Fax
+        type: string
+        required: false
+      - in: query
+        name: MobilePhone
+        description: Search filter for Mobile Phone
+        type: string
+        required: false
+      - in: query
+        name: HomePhone
+        description: Search filter for Home Phone
+        type: string
+        required: false
+      - in: query
+        name: OtherPhone
+        description: Search filter for Other Phone
+        type: string
+        required: false
+      - in: query
+        name: AssistantPhone
+        description: Search filter for Asst. Phone
+        type: string
+        required: false
+      - in: query
+        name: ReportsToId
+        description: Search filter for Reports To ID
+        type: string
+        required: false
+      - in: query
+        name: Email
+        description: Search filter for Email
+        type: string
+        required: false
+      - in: query
+        name: Title
+        description: Search filter for Title
+        type: string
+        required: false
+      - in: query
+        name: Department
+        description: Search filter for Department
+        type: string
+        required: false
+      - in: query
+        name: AssistantName
+        description: Search filter for Assistant's Name
+        type: string
+        required: false
+      - in: query
+        name: LeadSource
+        description: Search filter for Lead Source
+        type: string
+        required: false
+        enum:
+        - Web
+        - Phone Inquiry
+        - Partner Referral
+        - Purchased List
+        - Other
+      - in: query
+        name: Birthdate
+        description: Search filter for Birthdate
+        type: string
+        required: false
+      - in: query
+        name: Description
+        description: Search filter for Contact Description
+        type: string
+        required: false
+      - in: query
+        name: LastActivityDate
+        description: Search filter for Last Activity
+        type: string
+        required: false
+      - in: query
+        name: LastCURequestDate
+        description: Search filter for Last Stay-in-Touch Request Date
+        type: string
+        required: false
+      - in: query
+        name: LastCUUpdateDate
+        description: Search filter for Last Stay-in-Touch Save Date
+        type: string
+        required: false
+      - in: query
+        name: EmailBouncedReason
+        description: Search filter for Email Bounced Reason
+        type: string
+        required: false
+      - in: query
+        name: EmailBouncedDate
+        description: Search filter for Email Bounced Date
+        type: string
+        required: false
+      - in: query
+        name: simplicite__Level__c
+        description: Search filter for Level
+        type: string
+        required: false
+        enum:
+        - Secondary
+        - Tertiary
+        - Primary
+      - in: query
+        name: simplicite__Languages__c
+        description: Search filter for Languages
+        type: string
         required: false
       tags:
       - SFContact
@@ -491,6 +928,164 @@ paths:
         description: Documentation?
         type: boolean
         required: false
+      - in: query
+        name: CaseNumber
+        description: Search filter for Case Number
+        type: string
+        required: false
+      - in: query
+        name: ContactId
+        description: Search filter for Contact ID
+        type: string
+        required: false
+      - in: query
+        name: AccountId
+        description: Search filter for Account ID
+        type: string
+        required: false
+      - in: query
+        name: AssetId
+        description: Search filter for Asset ID
+        type: string
+        required: false
+      - in: query
+        name: ParentId
+        description: Search filter for Parent Case ID
+        type: string
+        required: false
+      - in: query
+        name: SuppliedName
+        description: Search filter for Name
+        type: string
+        required: false
+      - in: query
+        name: SuppliedEmail
+        description: Search filter for Email Address
+        type: string
+        required: false
+      - in: query
+        name: SuppliedPhone
+        description: Search filter for Phone
+        type: string
+        required: false
+      - in: query
+        name: SuppliedCompany
+        description: Search filter for Company
+        type: string
+        required: false
+      - in: query
+        name: Type
+        description: Search filter for Case Type
+        type: string
+        required: false
+        enum:
+        - Mechanical
+        - Electrical
+        - Electronic
+        - Structural
+        - Other
+      - in: query
+        name: Status
+        description: Search filter for Status
+        type: string
+        required: false
+        enum:
+        - New
+        - Working
+        - Escalated
+        - Closed
+      - in: query
+        name: Reason
+        description: Search filter for Case Reason
+        type: string
+        required: false
+        enum:
+        - Installation
+        - Equipment Complexity
+        - Performance
+        - Breakdown
+        - Equipment Design
+        - Feedback
+        - Other
+      - in: query
+        name: Origin
+        description: Search filter for Case Origin
+        type: string
+        required: false
+        enum:
+        - Phone
+        - Email
+        - Web
+      - in: query
+        name: Subject
+        description: Search filter for Subject
+        type: string
+        required: false
+      - in: query
+        name: Priority
+        description: Search filter for Priority
+        type: string
+        required: false
+        enum:
+        - High
+        - Medium
+        - Low
+      - in: query
+        name: Description
+        description: Search filter for Description
+        type: string
+        required: false
+      - in: query
+        name: IsClosed
+        description: Search filter for Closed
+        type: boolean
+        required: false
+      - in: query
+        name: ClosedDate
+        description: Search filter for Closed Date
+        type: string
+        required: false
+      - in: query
+        name: IsEscalated
+        description: Search filter for Escalated
+        type: boolean
+        required: false
+      - in: query
+        name: simplicite__EngineeringReqNumber__c
+        description: Search filter for Engineering Req Number
+        type: string
+        required: false
+      - in: query
+        name: simplicite__SLAViolation__c
+        description: Search filter for SLA Violation
+        type: string
+        required: false
+        enum:
+        - 'No'
+        - 'Yes'
+      - in: query
+        name: simplicite__Product__c
+        description: Search filter for Product
+        type: string
+        required: false
+        enum:
+        - GC1040
+        - GC1060
+        - GC3020
+        - GC3040
+        - GC3060
+        - GC5020
+        - GC5040
+        - GC5060
+        - GC1020
+      - in: query
+        name: simplicite__PotentialLiability__c
+        description: Search filter for Potential Liability
+        type: string
+        required: false
+        enum:
+        - 'No'
+        - 'Yes'
       tags:
       - SFCase
   /rest/SFCase/{row_id}:
@@ -723,9 +1318,180 @@ definitions:
   SFAccount:
     type: object
     properties:
+      Site:
+        description: Account Site
+        type: string
+      Ownership:
+        description: Ownership
+        type: string
+        enum:
+        - Public
+        - Private
+        - Subsidiary
+        - Other
+      Description:
+        description: Account Description
+        type: string
+      BillingCity:
+        description: Billing City
+        type: string
+      Rating:
+        description: Account Rating
+        type: string
+        enum:
+        - Hot
+        - Warm
+        - Cold
+      simplicite__SLASerialNumber__c:
+        description: SLA Serial Number
+        type: string
+      Website:
+        description: Website
+        type: string
+      NumberOfEmployees:
+        description: Employees
+        type: integer
+      simplicite__SLAExpirationDate__c:
+        description: SLA Expiration Date
+        type: string
+      Name:
+        description: Account Name
+        type: string
+      Industry:
+        description: Industry
+        type: string
+        enum:
+        - Agriculture
+        - Apparel
+        - Banking
+        - Biotechnology
+        - Chemicals
+        - Communications
+        - Construction
+        - Consulting
+        - Education
+        - Electronics
+        - Energy
+        - Engineering
+        - Entertainment
+        - Environmental
+        - Finance
+        - Food & Beverage
+        - Government
+        - Healthcare
+        - Hospitality
+        - Insurance
+        - Machinery
+        - Manufacturing
+        - Media
+        - Not For Profit
+        - Recreation
+        - Retail
+        - Shipping
+        - Technology
+        - Telecommunications
+        - Transportation
+        - Utilities
+        - Other
+      simplicite__Test__c:
+        description: Test
+        type: boolean
+      simplicite__NumberofLocations__c:
+        description: Number of Locations
+        type: number
+      Phone:
+        description: Account Phone
+        type: string
+      TickerSymbol:
+        description: Ticker Symbol
+        type: string
+      simplicite__UpsellOpportunity__c:
+        description: Upsell Opportunity
+        type: string
+        enum:
+        - Maybe
+        - 'No'
+        - 'Yes'
+      ShippingCountry:
+        description: Shipping Country
+        type: string
+      BillingPostalCode:
+        description: Billing Zip/Postal Code
+        type: string
+      ShippingCity:
+        description: Shipping City
+        type: string
+      ParentId:
+        description: Parent Account ID
+        type: string
+      Sic:
+        description: SIC Code
+        type: string
+      simplicite__Active__c:
+        description: Active
+        type: string
+        enum:
+        - 'No'
+        - 'Yes'
+      ShippingStreet:
+        description: Shipping Street
+        type: string
+      AccountNumber:
+        description: Account Number
+        type: string
+      Type:
+        description: Account Type
+        type: string
+        enum:
+        - Prospect
+        - Customer - Direct
+        - Customer - Channel
+        - Channel Partner / Reseller
+        - Installation Partner
+        - Technology Partner
+        - Other
+      BillingCountry:
+        description: Billing Country
+        type: string
+      BillingStreet:
+        description: Billing Street
+        type: string
+      ShippingPostalCode:
+        description: Shipping Zip/Postal Code
+        type: string
+      LastActivityDate:
+        description: Last Activity
+        type: string
+      ShippingState:
+        description: Shipping State/Province
+        type: string
       row_id:
         description: Unique technical row ID
         type: string
+      Fax:
+        description: Account Fax
+        type: string
+      simplicite__SLA__c:
+        description: SLA
+        type: string
+        enum:
+        - Gold
+        - Silver
+        - Platinum
+        - Bronze
+      simplicite__CustomerPriority__c:
+        description: Customer Priority
+        type: string
+        enum:
+        - High
+        - Low
+        - Medium
+      BillingState:
+        description: Billing State/Province
+        type: string
+      AnnualRevenue:
+        description: Annual Revenue
+        type: number
   TreeviewData:
     type: object
     properties:
@@ -750,8 +1516,132 @@ definitions:
   SFContact:
     type: object
     properties:
+      AssistantPhone:
+        description: Asst. Phone
+        type: string
+      EmailBouncedDate:
+        description: Email Bounced Date
+        type: string
+      OtherPhone:
+        description: Other Phone
+        type: string
+      AccountId:
+        description: Account ID
+        type: string
+      Email:
+        description: Email
+        type: string
+      Description:
+        description: Contact Description
+        type: string
+      AssistantName:
+        description: Assistant's Name
+        type: string
+      MailingCountry:
+        description: Mailing Country
+        type: string
+      Salutation:
+        description: Salutation
+        type: string
+        enum:
+        - Mr.
+        - Ms.
+        - Mrs.
+        - Dr.
+        - Prof.
+      OtherState:
+        description: Other State/Province
+        type: string
+      MailingState:
+        description: Mailing State/Province
+        type: string
+      MobilePhone:
+        description: Mobile Phone
+        type: string
+      Name:
+        description: Full Name
+        type: string
+      Department:
+        description: Department
+        type: string
+      OtherCity:
+        description: Other City
+        type: string
+      Phone:
+        description: Business Phone
+        type: string
+      MailingPostalCode:
+        description: Mailing Zip/Postal Code
+        type: string
+      OtherCountry:
+        description: Other Country
+        type: string
+      LastCUUpdateDate:
+        description: Last Stay-in-Touch Save Date
+        type: string
+      EmailBouncedReason:
+        description: Email Bounced Reason
+        type: string
+      FirstName:
+        description: First Name
+        type: string
+      OtherPostalCode:
+        description: Other Zip/Postal Code
+        type: string
+      Title:
+        description: Title
+        type: string
+      MailingCity:
+        description: Mailing City
+        type: string
+      Birthdate:
+        description: Birthdate
+        type: string
+      OtherStreet:
+        description: Other Street
+        type: string
+      LastCURequestDate:
+        description: Last Stay-in-Touch Request Date
+        type: string
+      simplicite__Languages__c:
+        description: Languages
+        type: string
+      LeadSource:
+        description: Lead Source
+        type: string
+        enum:
+        - Web
+        - Phone Inquiry
+        - Partner Referral
+        - Purchased List
+        - Other
+      HomePhone:
+        description: Home Phone
+        type: string
+      simplicite__Level__c:
+        description: Level
+        type: string
+        enum:
+        - Secondary
+        - Tertiary
+        - Primary
+      ReportsToId:
+        description: Reports To ID
+        type: string
+      LastActivityDate:
+        description: Last Activity
+        type: string
+      LastName:
+        description: Last Name
+        type: string
       row_id:
         description: Unique technical row ID
+        type: string
+      Fax:
+        description: Business Fax
+        type: string
+      MailingStreet:
+        description: Mailing Street
         type: string
   Error401:
     type: object
@@ -789,8 +1679,120 @@ definitions:
   SFCase:
     type: object
     properties:
+      ParentId:
+        description: Parent Case ID
+        type: string
+      Status:
+        description: Status
+        type: string
+        enum:
+        - New
+        - Working
+        - Escalated
+        - Closed
+      Origin:
+        description: Case Origin
+        type: string
+        enum:
+        - Phone
+        - Email
+        - Web
+      simplicite__PotentialLiability__c:
+        description: Potential Liability
+        type: string
+        enum:
+        - 'No'
+        - 'Yes'
+      simplicite__SLAViolation__c:
+        description: SLA Violation
+        type: string
+        enum:
+        - 'No'
+        - 'Yes'
+      AccountId:
+        description: Account ID
+        type: string
+      Description:
+        description: Description
+        type: string
+      SuppliedCompany:
+        description: Company
+        type: string
+      Priority:
+        description: Priority
+        type: string
+        enum:
+        - High
+        - Medium
+        - Low
+      simplicite__Product__c:
+        description: Product
+        type: string
+        enum:
+        - GC1040
+        - GC1060
+        - GC3020
+        - GC3040
+        - GC3060
+        - GC5020
+        - GC5040
+        - GC5060
+        - GC1020
+      ContactId:
+        description: Contact ID
+        type: string
+      IsClosed:
+        description: Closed
+        type: boolean
+      Reason:
+        description: Case Reason
+        type: string
+        enum:
+        - Installation
+        - Equipment Complexity
+        - Performance
+        - Breakdown
+        - Equipment Design
+        - Feedback
+        - Other
+      Subject:
+        description: Subject
+        type: string
+      SuppliedEmail:
+        description: Email Address
+        type: string
+      Type:
+        description: Case Type
+        type: string
+        enum:
+        - Mechanical
+        - Electrical
+        - Electronic
+        - Structural
+        - Other
+      SuppliedName:
+        description: Name
+        type: string
+      IsEscalated:
+        description: Escalated
+        type: boolean
+      SuppliedPhone:
+        description: Phone
+        type: string
+      simplicite__EngineeringReqNumber__c:
+        description: Engineering Req Number
+        type: string
+      CaseNumber:
+        description: Case Number
+        type: string
+      ClosedDate:
+        description: Closed Date
+        type: string
       row_id:
         description: Unique technical row ID
+        type: string
+      AssetId:
+        description: Asset ID
         type: string
 swagger: '2.0'
 info:
