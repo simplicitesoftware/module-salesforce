@@ -1,8 +1,8 @@
 {
-    "date": "Thu Jan 16 12:46:21 CET 2020",
+    "date": "Thu Jan 16 13:35:12 CET 2020",
     "name": "SalesForce",
     "format": "xml",
-    "description": "### Introduction\n\n**SalesForce** integration remote business objects examples.\n\n### Import\n\nTo import this module:\n\n- Create a module named `SalesForce`\n- Set the settings as:\n\n```json\n{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-salesforce.git\"\n\t}\n}\n```\n\n- Click on the _Import module_ button\n\n### Configure\n\nThere is one system parameter to configure:\n\n- The `SF_CREDENTIALS` in which you must set your SalesForce credentials\n\n> **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.",
+    "description": "### Introduction\n\n**SalesForce** integration remote business objects examples.\n\n### Import\n\nTo import this module:\n\n- Create a module named `SalesForce`\n- Set the settings as:\n\n```json\n{\n\t\"type\": \"git\",\n\t\"origin\": {\n\t\t\"uri\": \"https://github.com/simplicitesoftware/module-salesforce.git\"\n\t}\n}\n```\n\n- Click on the _Import module_ button\n\n### Configure\n\nThere is one system parameter to configure:\n\n- The `SALESFORCE_CREDENTIALS` in which you must set your SalesForce credentials\n\n> **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.",
     "files": ["SalesForce.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-salesforce.git"}},
     "version": "4.0",

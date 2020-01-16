@@ -37,7 +37,7 @@ To import this module:
 
 There is one system parameter to configure:
 
-- The `SF_CREDENTIALS` in which you must set your SalesForce credentials
+- The `SALESFORCE_CREDENTIALS` in which you must set your SalesForce credentials
 
 > **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.
 
