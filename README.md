@@ -11,7 +11,35 @@
 `SalesForce` module definition
 ==============================
 
-**SalesForce** examples
+### Introduction
+
+**SalesForce** integration remote business objects examples.
+
+### Import
+
+To import this module:
+
+- Create a module named `SalesForce`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-salesforce.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Configure
+
+There is one system parameter to configure:
+
+- The `SF_CREDENTIALS` in which you must set your SalesForce credentials
+
+> **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.
 
 `SFAccount` business object definition
 --------------------------------------

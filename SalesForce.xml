@@ -7,9 +7,42 @@
 		<mdl_name>SalesForce</mdl_name>
 		<mdl_version>4.0</mdl_version>
 		<mdl_prefix/>
-		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/salesforce-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2020-01-16 12:15:12</mdl_lastupd>
-		<mdl_comment><![CDATA[**SalesForce** examples]]></mdl_comment>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-salesforce.git"
+	}
+}]]></mdl_url>
+		<mdl_lastupd>2020-01-16 12:46:21</mdl_lastupd>
+		<mdl_comment><![CDATA[### Introduction
+
+**SalesForce** integration remote business objects examples.
+
+### Import
+
+To import this module:
+
+- Create a module named `SalesForce`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-salesforce.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Configure
+
+There is one system parameter to configure:
+
+- The `SF_CREDENTIALS` in which you must set your SalesForce credentials
+
+> **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -638,6 +671,42 @@
 		<res_file/>
 		<res_file_compiled/>
 		<res_image>resources/Disposition/default/salesforce.png</res_image>
+		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>salesforce-module</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/salesforce-module.png</res_image>
+		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>salesforce-module-full</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/salesforce-module-full.png</res_image>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
