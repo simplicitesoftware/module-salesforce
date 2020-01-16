@@ -1,0 +1,10 @@
+{
+    "date": "Thu Jan 16 12:15:12 CET 2020",
+    "name": "SalesForce",
+    "format": "xml",
+    "description": "**SalesForce** examples",
+    "files": ["SalesForce.xml"],
+    "repository": {},
+    "version": "4.0",
+    "dependencies": [{"Simplicite": "4.0"}]
+}
