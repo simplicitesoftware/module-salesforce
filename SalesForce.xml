@@ -56,6 +56,7 @@ There is one system parameter to configure:
 	"username": "_your_username_",
 	"password": "_your_password_"
 }]]></sys_value>
+		<sys_value2/>
 		<sys_type>PRV</sys_type>
 		<sys_desc><![CDATA[**SalesForce** credentials]]></sys_desc>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
@@ -252,6 +253,8 @@ There is one system parameter to configure:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>SFCase</obo_name>
@@ -317,6 +320,8 @@ There is one system parameter to configure:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>SFContact</obo_name>
@@ -382,6 +387,8 @@ There is one system parameter to configure:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 </object>
 <object>
