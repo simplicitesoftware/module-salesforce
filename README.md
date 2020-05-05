@@ -11,6 +11,8 @@
 `SalesForce` module definition
 ==============================
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-SalesForce&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-SalesForce)
+
 ### Introduction
 
 **SalesForce** integration remote business objects examples.
