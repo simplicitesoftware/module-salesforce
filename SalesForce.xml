@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>SalesForce</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix/>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -58,7 +58,12 @@ There is one system parameter to configure:
 	"username": "_your_username_",
 	"password": "_your_password_"
 }]]></sys_value>
-		<sys_value2/>
+		<sys_value2><![CDATA[{
+	"client_id": "3MVG9Rd3qC6oMalXWiYOcn_K0LNyTOcs9awbXCLzW0HujWBV76MThpb4YIVKZ8xKQWr1.G8UB034wDc2hwO15",
+	"client_secret": "3257307962172431713",
+	"username": "cgdave@gmail.com",
+	"password": "LSYuYNQgMvmA8W@"
+}]]></sys_value2>
 		<sys_type>PRV</sys_type>
 		<sys_desc><![CDATA[**SalesForce** credentials]]></sys_desc>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
@@ -95,6 +100,7 @@ There is one system parameter to configure:
 		<thm_menu_sact_t/>
 		<thm_menu_sta_c/>
 		<thm_menu_sta_t/>
+		<thm_compact/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 </object>
@@ -110,6 +116,7 @@ There is one system parameter to configure:
 		<viw_scope/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 		<viw_theme_id.thm_name>salesforce</viw_theme_id.thm_name>
+		<viw_lang/>
 	</data>
 </object>
 <object>
@@ -250,6 +257,8 @@ There is one system parameter to configure:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -317,6 +326,8 @@ There is one system parameter to configure:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -384,6 +395,8 @@ There is one system parameter to configure:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
