@@ -1,9 +1,9 @@
 {
-    "date": "2021-03-12 18:11:54",
+    "date": "2022-06-09 14:04:38",
     "name": "SalesForce",
     "format": "xml",
     "files": ["SalesForce.xml"],
-    "repository": {},
+    "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-salesforce.git"}},
     "version": "5",
-    "platform": "5.2.0-alpha"
+    "platform": "5.2.6"
 }

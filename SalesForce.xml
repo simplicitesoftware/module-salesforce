@@ -6,14 +6,14 @@
 	<data>
 		<mdl_name>SalesForce</mdl_name>
 		<mdl_version>5</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>sf</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
 	"origin": {
 		"uri": "https://github.com/simplicitesoftware/module-salesforce.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-01-16 13:35:12</mdl_lastupd>
+		<mdl_type>C</mdl_type>
 		<mdl_comment><![CDATA[[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-SalesForce&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-SalesForce)
 
 ### Introduction
@@ -58,6 +58,7 @@ There is one system parameter to configure:
 	"username": "_your_username_",
 	"password": "_your_password_"
 }]]></sys_value>
+		<sys_value2/>
 		<sys_type>PRV</sys_type>
 		<sys_desc><![CDATA[**SalesForce** credentials]]></sys_desc>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
@@ -94,8 +95,9 @@ There is one system parameter to configure:
 		<thm_menu_sact_t/>
 		<thm_menu_sta_c/>
 		<thm_menu_sta_t/>
-		<thm_compact/>
+		<thm_compact>0</thm_compact>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
+		<thm_const/>
 	</data>
 </object>
 <object>
@@ -178,13 +180,13 @@ There is one system parameter to configure:
 	<name>Domain</name>
 	<action>upsert</action>
 	<data>
-		<obd_name>SFDomain</obd_name>
+		<obd_name>SfDomain</obd_name>
 		<obd_comment/>
 		<obd_type>D</obd_type>
 		<obd_view_id.viw_name>SFHome</obd_view_id.viw_name>
-		<obd_nohome>0</obd_nohome>
+		<obd_nohome>1</obd_nohome>
 		<obd_icon>salesforce</obd_icon>
-		<obd_order>83000</obd_order>
+		<obd_order>61000</obd_order>
 		<obd_domain_id.obd_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -193,8 +195,9 @@ There is one system parameter to configure:
 	<name>ObjectInternal</name>
 	<action>upsert</action>
 	<data>
-		<obo_name>SFAccount</obo_name>
+		<obo_name oldvalue="SFAccount">SfAccount</obo_name>
 		<obo_dbtable>service-salesforce</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -245,7 +248,7 @@ There is one system parameter to configure:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -260,10 +263,13 @@ There is one system parameter to configure:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
-		<obo_name>SFCase</obo_name>
+		<obo_name oldvalue="SFCase">SfCase</obo_name>
 		<obo_dbtable>service-salesforce</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -314,7 +320,7 @@ There is one system parameter to configure:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -329,10 +335,13 @@ There is one system parameter to configure:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
-		<obo_name>SFContact</obo_name>
+		<obo_name oldvalue="SFContact">SfContact</obo_name>
 		<obo_dbtable>service-salesforce</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
@@ -383,7 +392,7 @@ There is one system parameter to configure:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -398,69 +407,71 @@ There is one system parameter to configure:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 </object>
 <object>
 	<name>Function</name>
 	<action>upsert</action>
 	<data>
-		<fct_name>SFAccount-CUD</fct_name>
+		<fct_name>SF_ACCOUNT_CRUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFAccount</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfAccount</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFAccount-R</fct_name>
+		<fct_name>SF_ACCOUNT_R</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFAccount</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfAccount</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFCase-CUD</fct_name>
+		<fct_name>SF_CASE_CRUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFCase</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfCase</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFCase-R</fct_name>
+		<fct_name>SF_CASE_R</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFCase</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfCase</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFContact-CUD</fct_name>
+		<fct_name>SF_CONTACT_CRUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFContact</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfContact</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFContact-R</fct_name>
+		<fct_name>SF_CONTACT_R</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFContact</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfContact</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>SFDomain-D</fct_name>
+		<fct_name>SF_DOMAIN_D</fct_name>
 		<fct_object_id.obj_type>D</fct_object_id.obj_type>
-		<fct_object_id.obj_name>SFDomain</fct_object_id.obj_name>
+		<fct_object_id.obj_name>SfDomain</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -472,9 +483,9 @@ There is one system parameter to configure:
 	<action>upsert</action>
 	<data>
 		<grt_group_id.grp_name>SF_READONLY</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFAccount-R</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_ACCOUNT_R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFAccount</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfAccount</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -482,9 +493,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_READONLY</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFCase-R</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_CASE_R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFCase</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfCase</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -492,9 +503,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_READONLY</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFContact-R</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_CONTACT_R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFContact</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfContact</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -502,9 +513,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_READONLY</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFDomain-D</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_DOMAIN_D</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFDomain</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfDomain</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -512,9 +523,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFAccount-CUD</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_ACCOUNT_CRUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFAccount</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfAccount</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -522,9 +533,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFCase-CUD</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_CASE_CRUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFCase</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfCase</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -532,9 +543,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFContact-CUD</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_CONTACT_CRUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFContact</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfContact</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -542,9 +553,9 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<grt_group_id.grp_name>SF_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>SFDomain-D</grt_function_id.fct_name>
+		<grt_function_id.fct_name>SF_DOMAIN_D</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>D</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>SFDomain</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>SfDomain</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -555,26 +566,26 @@ There is one system parameter to configure:
 	<name>Map</name>
 	<action>upsert</action>
 	<data>
-		<map_domain_id.obd_name>SFDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>SFAccount</map_object_id.obj_name>
+		<map_domain_id.obd_name>SfDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>SfAccount</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>83010</map_order>
+		<map_order>61010</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<map_domain_id.obd_name>SFDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>SFContact</map_object_id.obj_name>
+		<map_domain_id.obd_name>SfDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>SfContact</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>83020</map_order>
+		<map_order>61020</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<map_domain_id.obd_name>SFDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>SFCase</map_object_id.obj_name>
+		<map_domain_id.obd_name>SfDomain</map_domain_id.obd_name>
+		<map_object_id.obj_name>SfCase</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
-		<map_order>83030</map_order>
+		<map_order>61030</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -595,6 +606,7 @@ There is one system parameter to configure:
 		<vwi_show/>
 		<vwi_url/>
 		<vwi_image><![CDATA[../resource?code=SF-HOMEPAGE]]></vwi_image>
+		<vwi_treeview_id.trv_name/>
 		<vwi_crosstab_id.ctb_name/>
 		<vwi_printtmpl_id.prt_name/>
 		<vwi_printtmpl_id.prt_lang/>
@@ -621,42 +633,42 @@ There is one system parameter to configure:
 	<name>ObjectCtxHelp</name>
 	<action>upsert</action>
 	<data>
-		<och_object_id.obo_name>SFAccount</och_object_id.obo_name>
+		<och_object_id.obo_name>SfAccount</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>ENU</och_lang>
 		<och_help><![CDATA[This is the "Account" object from SalesForce]]></och_help>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>SFAccount</och_object_id.obo_name>
+		<och_object_id.obo_name>SfAccount</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>FRA</och_lang>
 		<och_help><![CDATA[Ceci est l'objet "Account" de SalesForce]]></och_help>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>SFCase</och_object_id.obo_name>
+		<och_object_id.obo_name>SfCase</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>ENU</och_lang>
 		<och_help><![CDATA[This is the "Case" object from SalesForce]]></och_help>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>SFCase</och_object_id.obo_name>
+		<och_object_id.obo_name>SfCase</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>FRA</och_lang>
 		<och_help><![CDATA[Ceci est l'objet "Case" de SalesForce]]></och_help>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>SFContact</och_object_id.obo_name>
+		<och_object_id.obo_name>SfContact</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>ENU</och_lang>
 		<och_help><![CDATA[This is the "Contact" object from SalesForce]]></och_help>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
 	<data>
-		<och_object_id.obo_name>SFContact</och_object_id.obo_name>
+		<och_object_id.obo_name>SfContact</och_object_id.obo_name>
 		<och_context>S;L;C;U;D;R;X;M;P;A</och_context>
 		<och_lang>FRA</och_lang>
 		<och_help><![CDATA[Ceci est l'objet "Contact" de SalesForce]]></och_help>
@@ -680,7 +692,6 @@ There is one system parameter to configure:
 		<res_code>salesforce</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/salesforce.png</res_image>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -698,7 +709,6 @@ There is one system parameter to configure:
 		<res_code>salesforce-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/salesforce-module.svg</res_image>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -716,7 +726,6 @@ There is one system parameter to configure:
 		<res_code>salesforce-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/salesforce-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -734,7 +743,6 @@ There is one system parameter to configure:
 		<res_code>SF-HOMEPAGE</res_code>
 		<res_cached>1</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/SF-HOMEPAGE.png</res_image>
 		<row_module_id.mdl_name>SalesForce</row_module_id.mdl_name>
 	</data>
@@ -744,7 +752,7 @@ There is one system parameter to configure:
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obd_name>SFDomain</tsl_id.obd_name>
+		<tsl_id.obd_name>SfDomain</tsl_id.obd_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>SalesForce</tsl_value>
 		<tsl_help/>
@@ -752,7 +760,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obd_name>SFDomain</tsl_id.obd_name>
+		<tsl_id.obd_name>SfDomain</tsl_id.obd_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>SalesForce</tsl_value>
 		<tsl_help/>
@@ -764,7 +772,7 @@ There is one system parameter to configure:
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFAccount</tsl_id.obo_name>
+		<tsl_id.obo_name>SfAccount</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Account</tsl_value>
 		<tsl_help/>
@@ -772,7 +780,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFCase</tsl_id.obo_name>
+		<tsl_id.obo_name>SfCase</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Case</tsl_value>
 		<tsl_help/>
@@ -780,7 +788,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFContact</tsl_id.obo_name>
+		<tsl_id.obo_name>SfContact</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Contact</tsl_value>
 		<tsl_help/>
@@ -788,7 +796,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFAccount</tsl_id.obo_name>
+		<tsl_id.obo_name>SfAccount</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Compte</tsl_value>
 		<tsl_help/>
@@ -796,7 +804,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFCase</tsl_id.obo_name>
+		<tsl_id.obo_name>SfCase</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Cas</tsl_value>
 		<tsl_help/>
@@ -804,7 +812,7 @@ There is one system parameter to configure:
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>SFContact</tsl_id.obo_name>
+		<tsl_id.obo_name>SfContact</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Contact</tsl_value>
 		<tsl_help/>

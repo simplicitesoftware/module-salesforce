@@ -43,7 +43,7 @@ There is one system parameter to configure:
 
 > **Note**: it is possible to ovveride these default parameters per user using corresponding user parameters.
 
-`SFAccount` business object definition
+`SfAccount` business object definition
 --------------------------------------
 
 SalesForce _Account_ object.
@@ -55,7 +55,7 @@ SalesForce _Account_ object.
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
-`SFCase` business object definition
+`SfCase` business object definition
 -----------------------------------
 
 SalesForce _Case_ object.
@@ -67,7 +67,7 @@ SalesForce _Case_ object.
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 
-`SFContact` business object definition
+`SfContact` business object definition
 --------------------------------------
 
 SalesForce _Contact_ object.

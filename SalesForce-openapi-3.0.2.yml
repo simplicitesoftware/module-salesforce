@@ -16,10 +16,10 @@ components:
           type: integer
           enum:
           - 404
-    ArrayOfSFAccount:
+    ArrayOfSfAccount:
       type: array
       items:
-        $ref: '#/components/schemas/SFAccount'
+        $ref: '#/components/schemas/SfAccount'
     PublicationResult:
       type: object
       properties:
@@ -29,21 +29,57 @@ components:
         content:
           description: Content (plain text or base64 encoded)
           type: string
-    ArrayOfSFCase:
+    PlaceData:
+      type: object
+      properties:
+        coord:
+          description: Geographical coordinates
+          type: string
+        address:
+          description: Address
+          type: string
+        row_id:
+          description: Row ID
+          type: string
+        label1:
+          description: 'Label #1'
+          type: string
+        label2:
+          description: 'Label #2'
+          type: string
+        label3:
+          description: 'Label #3'
+          type: string
+    PlaceMapData:
+      type: object
+      properties:
+        places:
+          description: Places
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceData'
+        name:
+          description: Name
+          type: string
+    SfAccount:
+      type: object
+      properties:
+        row_id:
+          description: Unique technical row ID
+          type: string
+    ArrayOfSfCase:
       type: array
       items:
-        $ref: '#/components/schemas/SFCase'
+        $ref: '#/components/schemas/SfCase'
+    ArrayOfSfContact:
+      type: array
+      items:
+        $ref: '#/components/schemas/SfContact'
     ActionResult:
       type: object
       properties:
         result:
           description: Action result
-          type: string
-    SFAccount:
-      type: object
-      properties:
-        row_id:
-          description: Unique technical row ID
           type: string
     TreeviewData:
       type: object
@@ -51,10 +87,12 @@ components:
         item:
           description: Object item with lists of linked objects' items
           type: object
-    ArrayOfSFContact:
-      type: array
-      items:
-        $ref: '#/components/schemas/SFContact'
+    SfContact:
+      type: object
+      properties:
+        row_id:
+          description: Unique technical row ID
+          type: string
     Error400:
       type: object
       properties:
@@ -66,7 +104,7 @@ components:
           type: integer
           enum:
           - 400
-    SFContact:
+    SfCase:
       type: object
       properties:
         row_id:
@@ -105,12 +143,6 @@ components:
           type: integer
           enum:
           - 403
-    SFCase:
-      type: object
-      properties:
-        row_id:
-          description: Unique technical row ID
-          type: string
   securitySchemes:
     basicAuth:
       scheme: basic
@@ -152,230 +184,16 @@ paths:
         required: false
       tags:
       - session
-  /rest/SFContact/{row_id}:
+  /rest/SfAccount/{row_id}:
     post:
-      summary: Create a new SFContactbusiness object record
+      summary: Create a new SfAccountbusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SFContact'
-      operationId: obj-sfcontact-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SFContact'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - SFContact
-    get:
-      summary: Get a SFContact business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-sfcontact-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SFContact'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - SFContact
-    delete:
-      summary: Delete a SFContact business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-sfcontact-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - SFContact
-    put:
-      summary: Update a SFContactbusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SFContact'
-      operationId: obj-sfcontact-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/SFContact'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - SFContact
-  /logout:
-    get:
-      summary: Logout (revoke bearer token)
-      security:
-      - bearerAuth: []
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-          content:
-            application/json: {}
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-      tags:
-      - session
-  /rest/SFAccount/{row_id}:
-    post:
-      summary: Create a new SFAccountbusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SFAccount'
+              $ref: '#/components/schemas/SfAccount'
       operationId: obj-sfaccount-create
       responses:
         '200':
@@ -383,7 +201,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFAccount'
+                $ref: '#/components/schemas/SfAccount'
         '400':
           description: Bad request
           content:
@@ -410,9 +228,9 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFAccount
+      - SfAccount
     get:
-      summary: Get a SFAccount business object record
+      summary: Get a SfAccount business object record
       security:
       - bearerAuth: []
       operationId: obj-sfaccount-get
@@ -422,7 +240,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFAccount'
+                $ref: '#/components/schemas/SfAccount'
         '401':
           description: Unauthorized
           content:
@@ -467,9 +285,9 @@ paths:
         description: Inline objects?
         required: false
       tags:
-      - SFAccount
+      - SfAccount
     delete:
-      summary: Delete a SFAccount business object record
+      summary: Delete a SfAccount business object record
       security:
       - bearerAuth: []
       operationId: obj-sfaccount-delete
@@ -510,16 +328,16 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFAccount
+      - SfAccount
     put:
-      summary: Update a SFAccountbusiness object record
+      summary: Update a SfAccountbusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SFAccount'
+              $ref: '#/components/schemas/SfAccount'
       operationId: obj-sfaccount-update
       responses:
         '200':
@@ -527,7 +345,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFAccount'
+                $ref: '#/components/schemas/SfAccount'
         '400':
           description: Bad request
           content:
@@ -560,10 +378,29 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFAccount
-  /rest/SFAccount:
+      - SfAccount
+  /logout:
     get:
-      summary: Search SFAccount business object records or get contextualized metadata
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+          content:
+            application/json: {}
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+      tags:
+      - session
+  /rest/SfAccount:
+    get:
+      summary: Search SfAccount business object records or get contextualized metadata
       security:
       - bearerAuth: []
       operationId: obj-sfaccount-search
@@ -574,7 +411,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfSFAccount'
+                $ref: '#/components/schemas/ArrayOfSfAccount'
         '401':
           description: Unauthorized
           content:
@@ -607,57 +444,10 @@ paths:
         description: Documentation?
         required: false
       tags:
-      - SFAccount
-  /rest/SFContact:
+      - SfAccount
+  /rest/SfCase:
     get:
-      summary: Search SFContact business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      operationId: obj-sfcontact-search
-      responses:
-        '200':
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ArrayOfSFContact'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: _metadata
-        description: Metadata?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _count
-        description: Count?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _doc
-        description: Documentation?
-        required: false
-      tags:
-      - SFContact
-  /rest/SFCase:
-    get:
-      summary: Search SFCase business object records or get contextualized metadata
+      summary: Search SfCase business object records or get contextualized metadata
       security:
       - bearerAuth: []
       operationId: obj-sfcase-search
@@ -668,7 +458,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArrayOfSFCase'
+                $ref: '#/components/schemas/ArrayOfSfCase'
         '401':
           description: Unauthorized
           content:
@@ -701,17 +491,17 @@ paths:
         description: Documentation?
         required: false
       tags:
-      - SFCase
-  /rest/SFCase/{row_id}:
+      - SfCase
+  /rest/SfCase/{row_id}:
     post:
-      summary: Create a new SFCasebusiness object record
+      summary: Create a new SfCasebusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SFCase'
+              $ref: '#/components/schemas/SfCase'
       operationId: obj-sfcase-create
       responses:
         '200':
@@ -719,7 +509,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFCase'
+                $ref: '#/components/schemas/SfCase'
         '400':
           description: Bad request
           content:
@@ -746,9 +536,9 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFCase
+      - SfCase
     get:
-      summary: Get a SFCase business object record
+      summary: Get a SfCase business object record
       security:
       - bearerAuth: []
       operationId: obj-sfcase-get
@@ -758,7 +548,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFCase'
+                $ref: '#/components/schemas/SfCase'
         '401':
           description: Unauthorized
           content:
@@ -803,9 +593,9 @@ paths:
         description: Inline objects?
         required: false
       tags:
-      - SFCase
+      - SfCase
     delete:
-      summary: Delete a SFCase business object record
+      summary: Delete a SfCase business object record
       security:
       - bearerAuth: []
       operationId: obj-sfcase-delete
@@ -846,16 +636,16 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFCase
+      - SfCase
     put:
-      summary: Update a SFCasebusiness object record
+      summary: Update a SfCasebusiness object record
       security:
       - bearerAuth: []
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SFCase'
+              $ref: '#/components/schemas/SfCase'
       operationId: obj-sfcase-update
       responses:
         '200':
@@ -863,7 +653,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SFCase'
+                $ref: '#/components/schemas/SfCase'
         '400':
           description: Bad request
           content:
@@ -896,7 +686,249 @@ paths:
         description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
-      - SFCase
+      - SfCase
+  /rest/SfContact:
+    get:
+      summary: Search SfContact business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-sfcontact-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfSfContact'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      tags:
+      - SfContact
+  /rest/SfContact/{row_id}:
+    post:
+      summary: Create a new SfContactbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SfContact'
+      operationId: obj-sfcontact-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SfContact'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - SfContact
+    get:
+      summary: Get a SfContact business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-sfcontact-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SfContact'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - SfContact
+    delete:
+      summary: Delete a SfContact business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-sfcontact-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - SfContact
+    put:
+      summary: Update a SfContactbusiness object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SfContact'
+      operationId: obj-sfcontact-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SfContact'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - SfContact
   /:
     get:
       summary: Get user session information
@@ -935,9 +967,9 @@ info:
   title: SalesForce
   version: '5'
 tags:
-- name: SFAccount
+- name: SfAccount
   description: Account
-- name: SFCase
+- name: SfCase
   description: Case
-- name: SFContact
+- name: SfContact
   description: Contact
